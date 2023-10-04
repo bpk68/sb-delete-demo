@@ -13,7 +13,7 @@ export default defineConfig({
   integrations: [
     storyblok({
       bridge: true,
-      accessToken: env.STORYBLOK_TOKEN,
+      accessToken: 'v7B5G6agQ2BSOE6XOQ93vAtt',
       apiOptions: {
         region: 'eu',
       },
