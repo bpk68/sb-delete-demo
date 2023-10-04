@@ -9,9 +9,10 @@ const env = loadEnv('', process.cwd(), 'STORYBLOK');
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
+  adapter: netlify(),
   integrations: [
     storyblok({
-      bridge: process.env.PUBLIC_ENV !== 'production',
+      bridge: true,
       accessToken: env.STORYBLOK_TOKEN,
       apiOptions: {
         region: 'eu',
@@ -33,5 +34,4 @@ export default defineConfig({
       https: true,
     },
   },
-  adapter: netlify(),
 });
